@@ -7,14 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ContadorComponent {
   @Input() valor = 0;
-  @Output() valorMudou = new EventEmitter();
+  @Output() valorChange = new EventEmitter();
 
   decrementar(){
     this.valor = this.valor - 1;
-    this.valorMudou.emit(this.valor);
+    this.valorChange.emit(this.valor);
   }
   incrementar(){
     this.valor = this.valor + 1;
-    this.valorMudou.emit(this.valor);
+    this.valorChange.emit(this.valor);
   }
 }

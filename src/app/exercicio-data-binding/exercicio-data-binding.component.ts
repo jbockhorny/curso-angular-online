@@ -17,6 +17,8 @@ export class ExercicioDataBindingComponent implements OnInit {
   isDisabled = true;
   acessibilityText = 'Um texto acessível';
   valorInput = '';
+  valorContador = 10;
+
   constructor() {
     setTimeout(() => {
       this.isDisabled = false;
@@ -43,9 +45,5 @@ passouMouse(){
 onClickBotaoEmissor($event){
   console.log('Devo emitir informações para o componente pai');
   this.clicado.emit('true');
-}
-
-onValorAtualizadoNoContador(novoValor){
-  console.log('Valor atualizado', novoValor);
 }
 }
