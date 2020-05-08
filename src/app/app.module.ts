@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ExercicioDataBindingComponent } from './exercicio-data-binding/exercicio-data-binding.component';
 import { ContadorComponent } from './contador/contador.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { DiretivasNgclassComponent } from './diretivas-ngclass/diretivas-ngclass.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     ExercicioDataBindingComponent,
     ContadorComponent,
     DiretivasComponent,
+    DiretivasNgclassComponent,
   ],
   imports: [
     BrowserModule,
