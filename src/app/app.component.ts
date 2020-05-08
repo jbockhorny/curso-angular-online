@@ -10,15 +10,13 @@ export class AppComponent {
   pudim = 'Carro';
   cor = 'green';
   titulo = 'Seja bem-vinda!';
+  showHeader = true;
 
-  constructor(){
-   setTimeout(() => {
-     this.titulo = 'Mudou';
-   }, 5000);
-  }
+  constructor(){ }
 
   eventoRecebido($event){
     console.log('App component: EVENTO RECEBIDO!', $event);
   }
+
 }
 
