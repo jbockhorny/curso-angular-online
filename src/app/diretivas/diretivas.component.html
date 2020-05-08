@@ -1,7 +1,7 @@
 <!-- <p>diretivas works!</p> -->
 
 <!-- <div *ngIf="condition">Content to render when condition is true.</div> -->
-<p>Valor atual dentro de deveExibir: {{ deveExibir}}</p>
+<!-- <p>Valor atual dentro de deveExibir: {{ deveExibir}}</p>
 
 <button (click)="trocarValor()">Trocar valor</button>
 
@@ -24,11 +24,11 @@
 <ng-template #thenBlock>BLOCO TRUE DO NG-TEMPLATE.</ng-template>
 <ng-template #elseBlock2>BLOCO FALSE DO NG-TEMPLATE.</ng-template>
 
-<hr>
+<hr> -->
 
 <!-- NGFOR -->
 
-<ul>
+<!-- <ul>
     <li *ngFor="let fruta of listaFrutas">{{ fruta }}</li>
 </ul>
 
@@ -37,4 +37,17 @@
 
 <ul>
     <li *ngFor="let carro of carrosLista; index as index">{{index + 1}} - {{ carro.placa }} - {{ carro.cor }}</li>
+</ul> -->
+
+<ul>
+<li *ngFor="let item of MEME">
+  <h2>Categoria: {{ item.categoria }}</h2>
+  <div *ngFor="let i of item.memes; even as even">
+    <img [src]="PREFIXO_IMG_URL + i.imagemURL" *ngIf="even; else blocoEven">
+    <ng-template #blocoEven>
+      <h3>Par</h3>
+    </ng-template>
+
+  </div>
+</li>
 </ul>

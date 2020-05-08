@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
+import { MEMES_AGRUPADOS_POR_CATEGORIA } from '.././dados-exercicios';
+
 @Component({
   selector: 'app-diretivas',
   templateUrl: './diretivas.component.html',
   styleUrls: ['./diretivas.component.scss']
 })
 export class DiretivasComponent {
+
+  MEME = MEMES_AGRUPADOS_POR_CATEGORIA;
+  PREFIXO_IMG_URL = 'https://raw.githubusercontent.com/vitorfgsantos/angular-memes-diretivas/master/images';
 
   listaFrutas = [
     'maça',
@@ -29,11 +34,9 @@ export class DiretivasComponent {
   }];
 
   deveExibir = false;
-
   trocarValor(){
     this.deveExibir = !this.deveExibir;
-    console.log(typeof this.carrosLista);
-  }
+    }
 
   soma(num1, num2){
     return num1 + num2;
