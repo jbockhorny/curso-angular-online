@@ -1,15 +1,16 @@
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ContadorComponent } from './contador/contador.component';
+import { DiretivasNgclassComponent } from './diretivas-ngclass/diretivas-ngclass.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
+import { ExercicioDataBindingComponent } from './exercicio-data-binding/exercicio-data-binding.component';
+import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
-import { ExercicioDataBindingComponent } from './exercicio-data-binding/exercicio-data-binding.component';
-import { ContadorComponent } from './contador/contador.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { DiretivasNgclassComponent } from './diretivas-ngclass/diretivas-ngclass.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,16 @@ import { DiretivasNgclassComponent } from './diretivas-ngclass/diretivas-ngclass
     ContadorComponent,
     DiretivasComponent,
     DiretivasNgclassComponent,
+    PipesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

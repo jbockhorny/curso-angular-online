@@ -1,0 +1,18 @@
+<p>Título: {{filme.titulo | titlecase }}</p>
+<p>Avaliação: {{filme.estrelas | number:'1.1-2'}}</p>
+<p>Preço do Aluguel: {{filme.precoAluguel | currency:'BRL'}}</p>
+<p>Data de lançamento: {{filme.dataLancamento | date:'fullDate' | uppercase}}</p>
+
+<ul>
+    <div *ngFor="let item of compras">
+    <li > Produto: <strong>{{ item.produto | uppercase}}</strong></li>
+    <p>valor: {{ item.valor | currency:'BRL'}}</p>
+    <p>Quantidade: {{ item.quantidade | number}} </p>
+    <!-- <p>Peso: {{ item.peso > 0 ? (item.peso | number:'1.1-2') + ' Kg' : 'Sem Peso' }}</p> -->
+    <p>Peso: {{ getPesoFormatado(item.peso)}}</p>
+    <p>Data: {{ item.data | date:'EEEE, dd \'de\' MMMM \'de\' yyyy \'às\' HH:mm' }}</p>
+    <!-- <p>Data: {{ item.data | date:'fullDate' }} às {{ item.data | date:'HH:mm'}}</p> -->
+</div>
+</ul>
+
+
