@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MEMES_AGRUPADOS_POR_CATEGORIA } from '.././dados-exercicios';
+import { MEMES_AGRUPADOS_POR_CATEGORIA } from '../../../dados-exercicios';
 
 @Component({
   selector: 'app-diretivas',

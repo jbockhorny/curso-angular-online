@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContadorComponent } from './contador/contador.component';
-import { DiretivasNgclassComponent } from './diretivas-ngclass/diretivas-ngclass.component';
-import { DiretivasComponent } from './diretivas/diretivas.component';
-import { ExercicioDataBindingComponent } from './exercicio-data-binding/exercicio-data-binding.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
-import { PipesComponent } from './pipes/pipes.component';
+import { ContadorComponent } from './shared/components/contador/contador.component';
+import { DiretivasNgclassComponent } from './shared/components/diretivas-ngclass/diretivas-ngclass.component';
+import { DiretivasComponent } from './shared/components/diretivas/diretivas.component';
+import { ExercicioDataBindingComponent } from './shared/components/exercicio-data-binding/exercicio-data-binding.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { PipesComponent } from './shared/components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
