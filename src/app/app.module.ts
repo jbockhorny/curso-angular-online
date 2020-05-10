@@ -3,13 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExtratoComponent } from './extrato/extrato.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ContadorComponent } from './shared/components/contador/contador.component';
 import { DiretivasNgclassComponent } from './shared/components/diretivas-ngclass/diretivas-ngclass.component';
 import { DiretivasComponent } from './shared/components/diretivas/diretivas.component';
 import { ExercicioDataBindingComponent } from './shared/components/exercicio-data-binding/exercicio-data-binding.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { NaoEncontradoComponent } from './shared/components/nao-encontrado/nao-encontrado.component';
 import { PipesComponent } from './shared/components/pipes/pipes.component';
 
 @NgModule({
@@ -23,6 +26,9 @@ import { PipesComponent } from './shared/components/pipes/pipes.component';
     DiretivasComponent,
     DiretivasNgclassComponent,
     PipesComponent,
+    LoginComponent,
+    ExtratoComponent,
+    NaoEncontradoComponent,
   ],
   imports: [
     BrowserModule,
