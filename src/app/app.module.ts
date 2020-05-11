@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { NaoEncontradoComponent } from './shared/components/nao-encontrado/nao-encontrado.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ContatosComponent } from './contatos/contatos.component';
 
 registerLocaleData(localePt, 'pt');
 
@@ -21,6 +22,7 @@ registerLocaleData(localePt, 'pt');
     LoginComponent,
     ExtratoComponent,
     NaoEncontradoComponent,
+    ContatosComponent,
   ],
   imports: [
     BrowserModule,
