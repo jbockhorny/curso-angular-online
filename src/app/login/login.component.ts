@@ -1,4 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +12,13 @@ export class LoginComponent {
 
   @ViewChild('emailInput') emailInput: ElementRef;
   @ViewChild('passwordlInput') passwordlInput: ElementRef;
+
   email: string;
   password: string;
+
+  constructor(
+    private loginService: LoginService,
+  ) {}
 
   onSubmit(form) {
     if (!form.valid) {
@@ -27,9 +35,22 @@ export class LoginComponent {
       }
       return;
     }
+    this.login();
   }
 
-  exibeErro(nomeControle: string, form) {
+  login(){
+    this.loginService.logar(this.email, this.password)
+    .subscribe(
+      response => {
+        console.log('Sucesso! Logou');
+      },
+      error => {
+        console.log('Deu ruim! Não logou')
+      }
+    );
+  }
+
+  exibeErro(nomeControle: string, form: NgForm) {
     if (!form.controls[nomeControle]) {
       return false;
     }
