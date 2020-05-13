@@ -13,23 +13,15 @@
       
       <table class="table table hover">
         <tr>
-          <th> Id</th>
           <th> Nome </th>
-          <th> CPF</th>
-          <th> Banco</th>
-          <th> Agência</th>
-          <th> Conta Corrente </th>
+          <th> Ações </th>
         </tr>
         <tr *ngFor="let contato of contatos">
-          <td>{{ contato.id }}</td>
           <td>{{ contato.nome }}</td>
-          <td>{{ contato.cpf }}</td>
-          <td>{{ contato.banco }}</td>
-          <td>{{ contato.ag }}</td>
-          <td>{{ contato.cc }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="irParaDetalhes(contato.id)">Ver detalhes</button>
+          </td>
         </tr>
       </table>
-    </div>
-  
-  
+    </div>  
   </div>
