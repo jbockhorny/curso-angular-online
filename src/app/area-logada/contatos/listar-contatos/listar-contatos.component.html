@@ -8,6 +8,7 @@
       <h2>Deu erro :(</h2>
       <button (click)="carregarContatos()">Tentar novamente</button>
     </div>
+    <button class="btn btn-primary m-1" (click)="novoContato()">Novo contato</button>
   
     <div *ngIf="!estaCarregando && !erroNoCarregamento" >
       
@@ -21,7 +22,7 @@
           <td>
             <button class="btn btn-primary m-1" (click)="irParaDetalhes(contato.id)">Ver detalhes</button>
             <button class="btn btn-danger m-1" (click)="deletarContato(contato.id)">Deletar</button>
-          </td>
+            </td>
         </tr>
       </table>
     </div>  
