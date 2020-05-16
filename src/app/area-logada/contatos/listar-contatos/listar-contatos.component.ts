@@ -55,7 +55,7 @@ export class ListarContatosComponent implements OnInit {
     }
 
     deletarContato(idContato: number) {
-      this.contratosService.deleteContato(idContato.toString())
+      this.contratosService.deleteContato(idContato.toString()) 
       .subscribe(
         response => this.onSucessDeletarContato(idContato),
         error => this.onErrorDeletarContato(),
@@ -72,5 +72,9 @@ export class ListarContatosComponent implements OnInit {
     }
     novoContato(){
       this.router.navigate(['contatos/novo']);
+    }
+
+    irParaEditar(idContato: number){
+      this.router.navigate([`contatos/${idContato}/editar`]);
     }
 }

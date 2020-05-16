@@ -33,12 +33,12 @@ export class ContatosService {
     return this.http.get<Contato>(`${this.API_URL}/contatos/${id}`, this.httpOptions);
   }
 
-  createcontato(contato: Contato) {
+  createContato(contato: Contato) {
     return this.http.post<Contato[]>(`${this.API_URL}/contatos`, contato, this.httpOptions);
   }
 
   updateContato(id: string, contato: Contato) {
-    return this.http.put<Contato[]>(`${this.API_URL}/contatos/${id}`, contato, this.httpOptions);
+    return this.http.put<Contato>(`${this.API_URL}/contatos/${id}/`, contato, this.httpOptions);
   }
 
   deleteContato(id: string){

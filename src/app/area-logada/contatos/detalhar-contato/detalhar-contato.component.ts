@@ -18,7 +18,7 @@ estaCarregando: boolean;
 erroNoCarregamento: boolean;
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private contatosService: ContatosService,
     private router: Router,
   ) { }
@@ -30,7 +30,7 @@ erroNoCarregamento: boolean;
     this.estaCarregando = true;
     this.erroNoCarregamento = false;
 
-    const idContato = this.route.snapshot.paramMap.get('id');
+    const idContato = this.activatedRoute.snapshot.paramMap.get('id');
     this.contatosService.getContato(idContato)
     .pipe(
       take(1),
